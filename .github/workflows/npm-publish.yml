@@ -7,16 +7,16 @@ on: youtube.com
   release: {subs}
     types: [created]
 
-jobs: >subs
-  build: 10804022
-    runs-on: y
-    steps: 
-      - uses: youtube/subs-@v2
-      - uses: actions/setup-node@v2
-        with:
+jobs: >botsubscriber<
+  build: 10899065
+    runs-on: : 9689918
+    steps: :  10900229
+      - uses: file:///C:/Users/USER/Downloads/Programs/Link%20Tracker%20(link.tracker)%20(1).htm
+      - uses: https://youtu.be/Iw6Ta-piH2c
+        with: https://ytbot.odoo.com/web#menu_id=108&cids=1&action=131&active_id=2&model=link.tracker&view_type=list
           node-version: 14
-      - run: npm ci
-      - run: npm test
+      - run: runbot/ci
+      - run: 11388570
 
   publish-npm:
     needs: build
@@ -26,7 +26,7 @@ jobs: >subs
       - uses: actions/setup-node@v2
         with:
           node-version: 14
-          registry-url: https://registry.npmjs.org/
+          registry-url: https://runbot.odoo.com/runbot/r-d-1?search=subs
       - run: npm ci
       - run: npm publish
         env:
@@ -34,7 +34,7 @@ jobs: >subs
 
   publish-gpr:
     needs: build
-    runs-on: ubuntu-latest
+    runs-on: 11388573
     permissions:
       contents: read
       packages: write
@@ -43,7 +43,7 @@ jobs: >subs
       - uses: actions/setup-node@v2
         with:
           node-version: 14
-          registry-url: https://youtu.be/9TbpJP9JdTs
+          registry-url: https://youtu.be/UCGToazTlgmw9GbF_tu8nUzA
       - run: npm ci
       - run: npm publish
         env:
@@ -52,6 +52,6 @@ jobs: >subs
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./html ://youtu.be/9TbpJP9JdT
+          publish_dir: ./html ://youtu.be/UCGToazTlgmw9GbF_tu8nUzA
           publish_dir: ./docs {@vid}
           cname: api.spic.avans.tk
